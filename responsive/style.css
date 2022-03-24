@@ -5,6 +5,7 @@
  *
  */
 
+
 /* Reset
 /* ============== */
 
@@ -26,7 +27,7 @@ html {
   /* ============== */
   
   body {
-    background-color: #999;
+    background-color: hsl(0, 0%, 60%);
     font-family: Verdana;
     font-size: 1.6rem;
   }
@@ -61,12 +62,11 @@ html {
     align-items: flex-start;
     background-color: #333;
     color: #ccc;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
     padding: 2rem;
-    padding-bottom: 4rem;
     position: relative;
+  }
+  header h1 {
+    margin-bottom: 2rem;
   }
   header h1 a {
     font-weight: normal;
@@ -115,16 +115,10 @@ html {
   /* Main
   /* ============== */
   
-  main {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  
   /* sub menu */
   #leftmenu {
     background-color: #FEFF99;
     padding: 1rem 2rem;
-    width: 21%;
   }
   #leftmenu ul {
     list-style: none;
@@ -133,7 +127,6 @@ html {
   /* content */
   #content {
     padding: 1rem 2rem;
-    width: 79%;
   }
   .content_header {
     font-size: smaller;
@@ -147,15 +140,12 @@ html {
     width: 100%;
   }
   
-  
   /* aside */
   main aside {
     border: 1px solid gray;
-    float: right;
     font-size: smaller;
-    margin: 1.5rem 0 1rem 1rem;
+    margin: 1.5rem 0 1rem 0;
     padding: 1rem;
-    width: 16rem;
   }
   main aside article {
     font-size: 1.2rem;
@@ -200,9 +190,9 @@ html {
     font-style: italic;
   }
   
-  
-  /* Footer
-  /* ============== */
+  /* ===========================================
+    Footer
+    =========================================== */
   
   footer {
     background-color: #666;
@@ -237,4 +227,41 @@ html {
   footer li + li:before {
     content: ' | ';
     color: #999;
+
   }
+  main{
+      background-color: burlywood;
+  }
+  
+  /* Media queries
+  /* ============== */
+  
+  @media (min-width: 500px) {
+    main aside {
+      float: right;
+      margin-left: 1rem;
+      width: 16rem;
+    }
+    header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+    main{
+        background-color: ghostwhite;
+    }
+  }
+  @media (min-width: 600px) {
+    main {
+      display: flex;
+      flex-flow: row nowrap;
+      background-color: navajowhite;
+    }
+    #leftmenu {
+      width: 21%;
+    }
+    #content {
+      width: 79%;
+    }
+  }
+  
